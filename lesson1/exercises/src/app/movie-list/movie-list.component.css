@@ -1,0 +1,13 @@
+body{
+
+    border-style: solid;
+   
+}
+h3 {
+    text-align: center;
+}
+
+.movies {
+    color: green;
+    font-size: 1.3vw;
+}
