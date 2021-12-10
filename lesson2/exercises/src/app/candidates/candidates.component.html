@@ -41,10 +41,10 @@
     </div>
     <hr>
     <div class = 'centered'>
-        <button>Clear Data & Image</button>
-        <!-- Add a "Send o' Mission" button here. -->
-        <button (click) = addToCrew(selected.name)>Send on Mission</button>
-        
+        <button (click)="selected = false">Clear Data & Image</button>
+        <button (click) = addToCrew(selected)>Send on Mission</button>
+        <br>
+        <button (click) = "crew = []" *ngIf = "crew.length !== 0"> Clear Crew List</button>
     </div>
 </div>
 
