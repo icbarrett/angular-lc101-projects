@@ -1,14 +1,24 @@
-<div class="chores">
+<div class="chores" *ngIf = "chores.length === 0 || finishedChores > 3"; else needMoreMovies">
     <h3>Chores</h3>
     <ul>
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
 </div>
+<ng-template #needMoreMovies>
+    <div class='chores'>
+        <h3>Chores</h3>
+        <p style="color: green;">Work harder!</p>
+    </div>
+</ng-template>
+
 <hr>
 <div class="doneChores">
     <h3>Done Chores</h3>
     <ul>
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
+    <p>
+        <img src="{{targetImage}}" alt="Oops!">
+    </p>
 </div>
 <hr>
