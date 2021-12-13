@@ -13,4 +13,8 @@ export class ButtonsComponent implements OnInit {
 
    ngOnInit() { }
 
+   buttonFunction() {
+      return "inactive = !inactive";
+   } 
+
 }
